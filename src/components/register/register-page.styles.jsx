@@ -1,32 +1,6 @@
 import styled from "styled-components";
 
-export const LoginContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 40%;
-  height: 90vh;
-  background: #fff;
-  border-radius: 15px;
-  box-shadow: -10px 10px 45px #000000;
-  transition: 500ms;
-  margin: 5vh;
-
-  @media (max-width: 1000px) {
-    max-width: 60%;
-  }
-  @media (max-width: 700px) {
-    max-width: 80%;
-  }
-  @media (max-width: 550px) {
-    max-width: 100%;
-    margin: 0vh;
-    height: 100vh;
-    border-radius: 0px;
-  }
-  .wraper {
-    margin-top: auto;
-  }
+export const RegisterContainer = styled.div`
   h1 {
     font-size: 23px;
     color: #4b4b4b;

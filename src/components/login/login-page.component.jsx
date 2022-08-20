@@ -1,7 +1,9 @@
 import React from "react";
-import { LoginContainer } from "./login-page.styles";
+import { ButtonContainer, LoginContainer } from "./login-page.styles";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../../src/contexts/auth";
+import Register from "../register/register-page.component";
+import Button from "../button/button.component";
 
 const Login = () => {
   const { loginUser } = useContext(AuthContext);
@@ -22,31 +24,33 @@ const Login = () => {
 
   return (
     <LoginContainer>
-      <h1>Já tem uma conta?</h1>
-      <form className="form" onSubmit={handleSubmit}>
-        <div className="txt_field">
-          <input
-            type="text"
-            name="email"
-            value={email}
-            onChange={handleChange}
-          />
-          <span></span>
-          <label htmlFor="email">Email</label>
-        </div>
-        <div className="txt_field">
-          <input
-            type="password"
-            name="password"
-            value={password}
-            onChange={handleChange}
-          />
-          <span></span>
-
-          <label htmlFor="password">Password</label>
-        </div>
-        <button type="submit">Logar</button>
-      </form>
+      <div className="wraper">
+        <h1>Bem vindo(a) de volta</h1>
+        <form className="form" onSubmit={handleSubmit}>
+          <div className="input">
+            <input
+              type="text"
+              name="email"
+              placeholder="Email"
+              value={email}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="input">
+            <input
+              type="password"
+              name="password"
+              placeholder="Senha"
+              value={password}
+              onChange={handleChange}
+            />
+          </div>
+          <ButtonContainer>
+            <Button type="submit">Entrar</Button>
+          </ButtonContainer>
+        </form>
+        <Register />
+      </div>
     </LoginContainer>
   );
 };
