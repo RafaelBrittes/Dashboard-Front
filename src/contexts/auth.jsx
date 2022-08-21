@@ -23,6 +23,8 @@ export const AuthProvider = ({ children }) => {
     if (recoveredUser && token) {
       setUser(JSON.parse(recoveredUser));
       api.defaults.headers.Authorization = `Bearer ${token}`;
+    } else {
+      navigate("/login");
     }
 
     setLoading(false);

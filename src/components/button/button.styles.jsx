@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const BaseButton = styled.button`
   width: 140px;
-
   height: 40px;
   line-height: 30px;
   border-radius: 7px;
