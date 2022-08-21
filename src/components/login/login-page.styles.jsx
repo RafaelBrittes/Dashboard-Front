@@ -4,22 +4,24 @@ export const LoginContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 40%;
+  width: 40vw;
   height: 90vh;
   background: #fff;
   border-radius: 15px;
   box-shadow: -10px 10px 45px #000000;
   transition: 500ms;
   margin: 5vh;
-
+  @media (max-width: 1200px) {
+    width: 50vw;
+  }
   @media (max-width: 1000px) {
-    max-width: 60%;
+    width: 60vw;
   }
   @media (max-width: 700px) {
-    max-width: 80%;
+    width: 80vw;
   }
   @media (max-width: 550px) {
-    max-width: 100%;
+    width: 100vw;
     margin: 0vh;
     height: 100vh;
     border-radius: 0px;

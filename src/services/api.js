@@ -1,12 +1,15 @@
-import axios from "axios"
+import axios from "axios";
 
 const token = localStorage.getItem("token");
 
 export const api = axios.create({
-    baseURL: 'http://localhost:8989',
-    headers: {'Authorization': 'Bearer '+token} 
-})
+  baseURL: "http://localhost:8989",
+  headers: {
+    Authorization: "Bearer " + token,
+    "Access-Control-Allow-Origin": "*",
+  },
+});
 
 export const createSession = async (email, password) => {
-    return api.post('/login', email, password)
-}
+  return api.post("/login", email, password);
+};

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const SidebarComponent = styled.div`
   height: 100vh;
-  width: 250px;
+  width: 280px;
   background-color: #4d3a6b7f;
   .list {
     height: auto;
@@ -48,7 +48,7 @@ export const SidebarComponent = styled.div`
       display: flex;
       flex-direction: column;
       place-items: center;
-      flex: 75%;
+      flex: 80%;
       color: white;
       p {
         margin: 0;

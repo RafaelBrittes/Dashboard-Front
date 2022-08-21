@@ -60,7 +60,7 @@ const Sidebar = () => {
           return (
             <li
               className="li"
-              id={window.location.pathname == value.link ? "selected" : ""}
+              id={window.location.pathname === value.link ? "selected" : ""}
               key={key}
               onClick={() => {
                 window.location.pathname = value.link;
